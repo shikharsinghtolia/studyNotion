@@ -5,7 +5,7 @@ StudyNotion is a fully functional ed-tech platform that enables users to create,
 ____________________________________________________________________________________________________________________
 ____________________________________________________________________________________________________________________
 
-## 📌 Technology Used
+### Technology Used
 <a name="tech-stack"></a>
 
 ## 📌 Frontend
