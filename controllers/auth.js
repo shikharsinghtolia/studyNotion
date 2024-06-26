@@ -186,7 +186,7 @@ exports.login = async (req,res) => {
             const payload ={
                 email:user.email,
                 id:user._id,
-                role:user.role
+                accountType:user.accountType
             }
             //generate JWT
             const token= JWT.sign(payload,process.env.JWT_SECRET,{
@@ -212,6 +212,8 @@ exports.login = async (req,res) => {
         })
     }
 
+    
+
     }catch(error){
         console.log(error);
         return res.status(400).json({
@@ -220,4 +222,15 @@ exports.login = async (req,res) => {
             message:`error is this ${error}`
         })
     }
+}
+
+
+//changepassword 
+exports.changePassword = async(req,res)=>{
+    //get data from req body 
+    //get old password new password and confirm new password 
+    //validation if they are matching or not or emplty or not 
+    //update pwt in db 
+    //send  mail - password update 
+    // return password
 }
