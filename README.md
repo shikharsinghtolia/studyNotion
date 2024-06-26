@@ -8,7 +8,7 @@ ________________________________________________________________________________
 ## 📌 Technology Used
 <a name="tech-stack"></a>
 
-### Frontend
+## 📌 Frontend
 <a F="frontend"></a>
 <p>
   <a href="https://www.w3schools.com/html/"> <img src="https://img.icons8.com/color/70/000000/html-5--v1.png" alt="HTML" /></a>
@@ -22,7 +22,7 @@ ________________________________________________________________________________
 - **JavaScript**:JavaScript is a programming language used to add interactivity to websites.
 - **React.js**:A JavaScript library for building user interfaces. It allows developers to create large web applications that can update and render efficiently in response to data changes.
 
-### Backend
+## 📌 Backend
 <a m="backend"></a>
 <p>
 <a href="https://www.w3schools.com/nodejs/"><img src="https://e7.pngegg.com/pngimages/247/558/png-clipart-node-js-javascript-express-js-npm-react-github-angle-text.png" alt="Node.js" width="50" height="50" /></a>
@@ -36,7 +36,7 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________________
 ____________________________________________________________________________________________________________________
 
-### Database
+## 📌 Database
 <a j="database"></a>
 The database for the platform is built using MongoDB, which is a NoSQL database that
 provides a flexible and scalable data storage solution. MongoDB allows for the storage of
@@ -46,7 +46,7 @@ relevant information related to the platform.
 ____________________________________________________________________________________________________________________
 ____________________________________________________________________________________________________________________
 
-## API Design
+## 📌 API Design
 <a k="api-design"></a>
 
 The StudyNotion platform's API is designed following the REST architectural style. The
