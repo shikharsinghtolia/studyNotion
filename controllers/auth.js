@@ -228,9 +228,18 @@ exports.login = async (req,res) => {
 //changepassword 
 exports.changePassword = async(req,res)=>{
     //get data from req body 
-    //get old password new password and confirm new password 
+    const {password,confirmPassword} = req.body;
     //validation if they are matching or not or emplty or not 
+    if(password !== confirmPassword){
+      return res.status(400).json({
+        message:"passwords dont match please enter the correct password"
+      })
+    }
     //update pwt in db 
+    const hashedPassword = await bcrypt.hash(password,10);
     //send  mail - password update 
+    await User.findOneAndUpdate(
+      {password:hashedPassword}
+    )
     // return password
 }
