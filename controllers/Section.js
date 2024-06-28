@@ -23,7 +23,10 @@ exports.createSection = async (req, res) => {
         },
       },
       { new: true }
-    );
+    ).populate({
+      path:'SubSection',
+      model:'SubSection'
+    });
     //use populate to replace section/subsection both in updatedCourse Details
     //return res
     return res.status(200).json({
@@ -83,7 +86,7 @@ exports.deleteSection = async (req, res) => {
   } catch (error) {
     console.log(error);
     return res.status(500).json({
-      message: `An error occured during Section updation:${error}`,
+      message: `An error occured during Section Deletion:${error}`,
     });
   }
 };
