@@ -84,7 +84,7 @@ exports.createCourse = async (req, res) => {
 
 //get All Courses
 
-exports.showAllCourses = async (req, res) => {
+exports.getAllCourses = async (req, res) => {
   try {
     const AllCourses = await Course.find(
       {},
@@ -110,3 +110,22 @@ exports.showAllCourses = async (req, res) => {
     });
   }
 };
+
+
+//getCourseDetails
+
+exports.getCourseDetails = async(req,res)=>{
+  try {
+    //fetch course id 
+    const {courseId} = req.body;
+    //find details of the course
+    const courseDetails = await Course.find(
+      {_id:courseId}
+    )
+    
+    //populate 
+
+  } catch (error) {
+    
+  }
+}
