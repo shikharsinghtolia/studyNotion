@@ -7,7 +7,14 @@ const { uploadImageToCloudinary } = require("../utils/imageUploader");
 exports.createCourse = async (req, res) => {
   try {
     //fetch data and file
-    const { courseName, courseDescription, whatwillyouLearn, price, tag } =
+    const { courseName,
+			courseDescription,
+			whatYouWillLearn,
+			price,
+			tag,
+			category,
+			status,
+			instructions, } =
       req.body;
     //thumbnail
     const thumbnail = req.files.thumbnailImage;
@@ -15,7 +22,7 @@ exports.createCourse = async (req, res) => {
     if (
       !courseName ||
       !courseDescription ||
-      !whatwillyouLearn ||
+      !whatYouWillLearn ||
       !price ||
       !tag ||
       !thumbnail
@@ -52,7 +59,7 @@ exports.createCourse = async (req, res) => {
       courseName,
       courseDescription,
       instructor: instructorDetails._id,
-      whatwillyouLearn,
+      whatYouWillLearn,
       price,
       tag: tagDetails._id,
       thumbnail: thumbnailImage.secure_url,
